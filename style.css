@@ -1,0 +1,408 @@
+body {
+    background-image: url(img/amerikai.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.linkek {
+    letter-spacing: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6em;
+    background-color: #ea5911;
+    padding: 50px;
+    text-align: center;
+    word-spacing: 4.5em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+
+.linkek a:hover {
+    color: white;
+
+}
+
+.linkek a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.linkek a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+
+.torzs {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2em;
+    background-color: rgba(7, 7, 7, 0.849);
+    padding: 2em;
+    color: white;
+
+}
+
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    place-items: center;
+}
+
+
+
+.gallery img {
+    transform-origin: 50% 65%;
+    transition: transform 1s, filter 0.2s ease-in-out;
+    filter: brightness(100%);
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+}
+
+.gallery img:hover {
+
+    margin: auto;
+    transform: scale(1.2);
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ido {
+    padding-bottom: 4em;
+}
+
+ul {
+    padding-bottom: 0.7em;
+
+}
+
+
+svg {
+    fill: white;
+    height: 50px;
+    transition: transform .5s, fill .5s ease-in-out;
+    filter: brightness(100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.kapcs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+
+}
+
+
+
+
+.kapcs svg:hover {
+    fill: #ea5911;
+    transform: scale(1.2);
+
+
+}
+
+
+
+
+.tori p {
+    line-height: 2em;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    place-items: center;
+}
+
+.felt {
+    text-align: center;
+}
+
+@media only screen and (max-width:1470px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+
+    .kapcs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+
+    }
+
+    svg {
+        margin-top: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width:1310px) {
+
+    .kapcs {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+
+    }
+
+    svg {
+        margin-top: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width:1020px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .gallery img {
+
+        transition: transform 1s, filter 0.2s ease-in-out;
+        filter: brightness(100%);
+        width: 400px;
+        height: 300px;
+        margin: 20px;
+    }
+
+    .gallery img:hover {
+
+
+        transform: scale(1.0);
+
+    }
+
+    .lista {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media only screen and (max-width:750px) {
+
+    .linkek {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+
+    }
+
+    .palya {
+        width: 400px;
+        height: 250px;
+    }
+
+    .stuff {
+        width: 300px;
+        height: 150px;
+    }
+
+    .torzs {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .gallery img {
+        transition: transform 1s, filter 0.2s ease-in-out;
+        filter: brightness(100%);
+        width: 300px;
+        height: 200px;
+        margin: 20px;
+    }
+
+    .gallery img:hover {
+
+        margin: auto;
+        transform: scale(1.1);
+
+    }
+
+    .palya {
+        width: 300px;
+        height: 150px;
+    }
+
+    .stuff {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width:488px),
+(pointer:none),
+(pointer:coarse) {
+    .gallery img {
+        transition: transform 1s, filter 0.2s ease-in-out;
+        filter: brightness(100%);
+        width: 280px;
+        height: 180px;
+        margin: 20px;
+    }
+
+    .gallery img:hover {
+
+        margin: auto;
+        transform: scale(1.1);
+
+    }
+
+    .palya {
+        width: 200px;
+        height: 100px;
+    }
+
+    .stuff {
+        width: 200px;
+        height: 100px;
+    }
+
+
+    img {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:350px) {
+    .gallery img {
+        transition: transform 1s, filter 0.2s ease-in-out;
+        filter: brightness(100%);
+        width: 230px;
+        height: 130px;
+        margin: 20px;
+    }
+
+    .gallery img:hover {
+
+        margin: auto;
+        transform: scale(1.1);
+
+    }
+
+    .palya {
+        width: 160px;
+        height: 80px;
+    }
+
+    .stuff {
+        width: 160px;
+        height: 80px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width:320px) {
+    .gallery img {
+        transition: transform 1s, filter 0.2s ease-in-out;
+        filter: brightness(100%);
+        width: 200px;
+        height: 130px;
+        margin: 20px;
+    }
+
+    .gallery img:hover {
+
+        margin: auto;
+        transform: scale(1.1);
+
+    }
+
+    svg {
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width:290px) {
+    .gallery img {
+        transition: transform 1s, filter 0.2s ease-in-out;
+        filter: brightness(100%);
+        width: 150px;
+        height: 90px;
+        margin-bottom: 20px;
+
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .gallery img:hover {
+
+        margin: auto;
+        transform: scale(1.1);
+
+    }
+
+    ul {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    .linkek {
+        font-size: 1.4em;
+    }
+
+    .email {
+        font-size: 0.6em;
+    }
+
+}
